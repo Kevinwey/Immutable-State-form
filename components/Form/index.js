@@ -10,11 +10,46 @@ export default function Form() {
     },
   });
 
-  function handleNameChange(event) {}
+  function handleNameChange(event) {
+    updateMountain((draft) => {
+      draft.name = event.target.value;
+    });
+  }
 
-  function handleAltitudeChange(event) {}
+  function handleAltitudeChange(event) {
+    updateMountain((draft) => {
+      draft.values.altitude = event.target.value;
+    });
+  }
 
-  function handleMountainRangeChange(event) {}
+  function handleMountainRangeChange(event) {
+    updateMountain((draft) => {
+      draft.values.mountainRange = event.target.value;
+    });
+  }
+  // function handleNameChange(event) {
+  //   setMountain((prevMountains) => {
+  //     return { ...prevMountains, name: event.target.value };
+  //   });
+  // }s
+
+  // function handleAltitudeChange(event) {
+  //   setMountain((prevMountains) => {
+  //     return {
+  //       ...prevMountains,
+  //       values: { ...prevMountains.values, altitude: event.target.value },
+  //     };
+  //   });
+  // }
+
+  // function handleMountainRangeChange(event) {
+  //   setMountain((prevMountains) => {
+  //     return {
+  //       ...prevMountains,
+  //       values: { ...prevMountains.values, mountainRange: event.target.value },
+  //     };
+  //   });
+  // }
 
   return (
     <StyledForm>
